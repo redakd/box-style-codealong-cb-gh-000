@@ -7,7 +7,7 @@ h3 {
   margin: 0 0 10px;
 }
 
-p { 
+p {
   font-size: 1em; /* 16px, ?pt, 100%, 1em */
   line-height: 1.5em;
 }
@@ -28,12 +28,38 @@ figcaption {
   text-shadow: 0 2px 3px #000;
 }
 
+.shadow {
+  box-shadow: 0 3px 10px #333;
+}
 
+.border-right {
+  border-right: 1px dotted;
+}
 
 /*////////// BACKGROUNDS //////////*/
 
+.white-wood {
+  background: url(../images/white-wood.jpg) no-repeat center top;
+  background-size: cover;
+}
 
+.light-fade {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f6f8f9+0,d7dee3+100,f5f7f9+100 */
+  background: #f6f8f9; /* Old browsers */
+  background: -moz-linear-gradient(top, #f6f8f9 0%, #d7dee3 100%, #f5f7f9 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f6f8f9 0%,#d7dee3 100%,#f5f7f9 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f6f8f9 0%,#d7dee3 100%,#f5f7f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 ); /* IE6-9 */
+}
 
+.medium-fade {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f2f6f8+0,d8e1e7+50,b5c6d0+97,e0eff9+100 */
+background: #f2f6f8; /* Old browsers */
+background: -moz-linear-gradient(top, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 97%, #e0eff9 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #f2f6f8 0%,#d8e1e7 50%,#b5c6d0 97%,#e0eff9 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #f2f6f8 0%,#d8e1e7 50%,#b5c6d0 97%,#e0eff9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0 ); /* IE6-9 */
+}
 /*/////// MEDIA ////////*/
 
 img, video, audio, iframe, table, form {
@@ -72,17 +98,17 @@ img, video, audio, iframe, table, form {
 .col-1 {
   float: left;
   width: 32%;
-  background: #ccc;
+
 }
 
 .col-2 {
   float: left;
   width: 66%;
-  background: #ccc;
+
 }
 
 .col-3 {
-  background: #ccc;
+
 }
 
 [class*="col-"] {
@@ -111,17 +137,61 @@ img, video, audio, iframe, table, form {
 }
 
 /*////////// HEADER //////////*/
-
+header {
+  margin: 0 0 20px;
+}
 
 
 /*////////// NAVBAR //////////*/
 
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
 
+#navbar nav {
+  border-left: 1px solid #ccc;
+}
+
+#navbar nav a {
+  height: 80px;
+  display: inline-block;
+  width: 16.6666667%;
+  margin: 0;
+  border: 22px 0 ;
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  text-decoration: none;
+  font: 1em 'Trebuchet Ms','Arial',sans-serif;
+  padding: 30px 0
+}
+
+#navbar nav a.selected {
+  background: #333;
+  color: white;
+}
+
+#navbar nav a:hover {
+  color: white;
+  background: #f6f8f9; /* Old browsers */
+  background: -moz-linear-gradient(top, #f6f8f9 0%, #d7dee3 3%, #e5ebee 33%, #d7dee3 67%, #d7dee3 67%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f6f8f9 0%,#d7dee3 3%,#e5ebee 33%,#d7dee3 67%,#d7dee3 67%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f6f8f9 0%,#d7dee3 3%,#e5ebee 33%,#d7dee3 67%,#d7dee3 67%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#d7dee3',GradientType=0 ); /* IE6-9 */
+}
 
 /*////////// LOGO //////////*/
 
-
-
+#logo {
+  padding: 65px 0 0;
+}
 #logo h1 {
   font-family: 'Clicker Script', cursive;
 }
@@ -135,12 +205,15 @@ img, video, audio, iframe, table, form {
 section {
   padding: 30px;
   margin-bottom: 20px;
-
+  background: white;
 }
 
 /*////////// DETAILS //////////*/
 
-
+#details {
+  border-top: 1px solid #fff;
+  margin: 0;
+}
 
 #details div {
   height: 221px;
@@ -162,4 +235,11 @@ section {
 
 /*////////// FOOTER //////////*/
 
-
+footer {
+  text-align: center;
+  font-size: 0.75em;
+  background: #eee;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  margin: 0;
+}
